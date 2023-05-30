@@ -31,7 +31,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -64,8 +64,16 @@ header {
   color: #fff;
 }
 
+header nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
 header nav ul li {
   list-style-type: none;
+  margin: 0 10px;
 }
 
 header nav ul li a {
@@ -92,7 +100,7 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 100%;
 }
 
 form button {
@@ -117,3 +125,66 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media screen and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  header nav ul {
+    justify-content: flex-end;
+  }
+
+  header nav ul li {
+    margin: 0 10px 0 0;
+  }
+
+  #stay form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #stay form label,
+  #stay form select,
+  #stay form input {
+    width: auto;
+  }
+
+  #about .group {
+    flex-direction: row;
+  }
+
+  #about .item {
+    margin: 10px;
+  }
+
+  #about .item-double {
+    flex: 1;
+  }
+
+  #host .group {
+    flex-direction: row;
+  }
+
+  #host .item-double {
+    flex: 1;
+  }
+
+  #host .item-double ul {
+    margin-right: 20px;
+  }
+
+  #ideas .group {
+    flex-wrap: wrap;
+  }
+
+  #ideas .item {
+    flex-basis: 50%;
+  }
+}
