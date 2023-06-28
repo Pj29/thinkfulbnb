@@ -22,7 +22,7 @@ p {
 }
 
 section {
-  padding: 20px;
+  padding: 20px 0; /* Updated padding */
 }
 
 section.alternate-background {
@@ -171,6 +171,8 @@ footer p {
   /* Adjusted padding for sections in desktop view */
   section {
     padding-right: 40px;
+    margin-right: auto;
+    padding: 20px; /* Updated padding */
     width: 100%;
   }
 
