@@ -22,7 +22,7 @@ p {
 }
 
 section {
-  padding: 20px 0;
+  padding: 20px;
 }
 
 section.alternate-background {
@@ -145,11 +145,7 @@ footer p {
 /* Media query for desktop screens with a minimum width of 480px */
 
 @media all and (min-width: 480px) {
-
-  html {
-    width: auto;
-  } 
-
+  /* Adjusted styles for the header in desktop view */
   header {
     display: flex;
     flex-direction: row;
@@ -158,12 +154,12 @@ footer p {
     width: 100%;
   }
 
-
+  /* Adjusted font size for the logo in desktop view */
   header .logo {
     font-size: 3rem;
   }
 
-
+  /* Adjusted styles for the navigation menu in desktop view */
   header nav ul {
     list-style: none;
     display: flex;
@@ -172,14 +168,15 @@ footer p {
     padding-top: 8px;
   }
 
-
+  /* Adjusted padding for sections in desktop view */
   section {
     padding-right: 40px;
-    margin-right: auto; 
+    margin-right: auto;
+    padding: 20px;
     width: 100%;
   }
 
-
+  /* Adjusted styles for the form in desktop view */
   form {
     display: flex;
     flex-direction: row;
@@ -189,55 +186,61 @@ footer p {
     margin-left: 5px;
   }
 
-
+  /* Adjusted width for form select and input elements in desktop view */
   form select,
   form input {
     width: 100%;
   }
 
+  /* Adjusted styles for form buttons in desktop view */
   form button {
     font-size: 15px;
     padding: 10px 10px;
     width: 100%;
   }
 
+  /* Adjusted styles for groups in desktop view */
   .group {
     display: flex;
     flex-direction: row;
     width: 100%;
   }
 
-  #about .group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-
+  /* Adjusted width for form items in desktop view */
   form .item {
     width: 20%;
   }
 
-
+  /* Adjusted styles for items in desktop view */
   .item {
     flex: 1;
     align-items: center;
     flex-wrap: wrap;
   }
 
-
+  /* Adjusted styles for double-width items in desktop view */
   .item-double {
     flex: 2;
-    display: flex;
-    align-items: center;
-    width: auto;
   }
 
-
+  /* Adjusted styles for the footer in desktop view */
   footer {
     display: flex;
     justify-content: center;
     padding: 10px 30px;
+    width: 100%;
+  }
+}
+
+/* ------- Media Query ------- */
+@media all and (max-width: 479px) {
+  /* Adjusted styles for the about section in mobile view */
+  #about .group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item-double {
     width: 100%;
   }
 }
